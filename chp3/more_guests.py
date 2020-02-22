@@ -1,0 +1,21 @@
+guest_list = ['george harrison', 'shannon hoon', 'nate mendel']
+message = "\nOn behalf of vegetarians all over the world, you are invited to this cordial meal. \n\tPlease RSVP with your response promptly."
+print(f"Dear {guest_list[0].title()}, {message}")
+print(f"Dear {guest_list[1].title()}, {message}")
+print(f"Dear {guest_list[-1].title()}, {message}")
+print(f'{guest_list[0].title()} can no longer make it to dinner')
+guest_list[0] = 'kurt cobain'
+print(f"Dear {guest_list[0].title()}, {message}")
+print(f"Dear {guest_list[1].title()}, {message}")
+print(f'Dear {guest_list[-1].title()}, {message}')
+print("Everyone, we have found a bigger dinner table!!!")
+guest_list.insert(0,'john bonham')
+guest_list.insert(2,'jason rosenthal')
+guest_list.append('joe strummer')
+print(guest_list)
+print(f'Dear, {guest_list[0].title()}, {message}')
+print(f'Dear, {guest_list[1].title()}, {message}')
+print(f'Dear, {guest_list[2].title()}, {message}')
+print(f'Dear, {guest_list[3].title()}, {message}')
+print(f'Dear, {guest_list[4].title()}, {message}')
+len(guest_list)

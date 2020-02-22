@@ -1,0 +1,5 @@
+one_mill = list(range(0,1000001))
+print(one_mill)
+print(min(one_mill))
+print(max(one_mill))
+print(sum(one_mill))

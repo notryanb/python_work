@@ -1,0 +1,42 @@
+guest_list = ['george harrison', 'shannon hoon', 'nate mendel']
+message = "\nOn behalf of vegetarians all over the world, you are invited to this cordial meal. \n\tPlease RSVP with your response promptly."
+print(f"Dear {guest_list[0].title()}, {message}")
+print(f"Dear {guest_list[1].title()}, {message}")
+print(f"Dear {guest_list[-1].title()}, {message}")
+print(f'{guest_list[0].title()} can no longer make it to dinner')
+guest_list[0] = 'kurt cobain'
+print(f"Dear {guest_list[0].title()}, {message}")
+print(f"Dear {guest_list[1].title()}, {message}")
+print(f'Dear {guest_list[-1].title()}, {message}')
+print("Everyone, we have found a bigger dinner table!!!")
+guest_list.insert(0,'john bonham')
+guest_list.insert(2,'jason rosenthal')
+guest_list.append('joe strummer')
+print(guest_list)
+print(f'Dear, {guest_list[0].title()}, {message}')
+print(f'Dear, {guest_list[1].title()}, {message}')
+print(f'Dear, {guest_list[2].title()}, {message}')
+print(f'Dear, {guest_list[3].title()}, {message}')
+print(f'Dear, {guest_list[4].title()}, {message}')
+print('I am sorry to state that now I can only invite 2 people to dinner.')
+print(guest_list)
+shrinking_bonham = guest_list.pop(0)
+message = 'I am sorry to state that you are now no longer invited to dinner.'
+print(f'Dear, {shrinking_bonham.title()}, \n{message}')
+print(guest_list)
+shrinking_hoon = guest_list.pop(2)
+print(f'Dear {shrinking_hoon.title()}, \n{message}')
+print(guest_list)
+shrinking_strummer = guest_list.pop()
+print(f'Dear {shrinking_strummer.title()}, \n{message}')
+print(guest_list)
+shrinking_mendel = guest_list.pop()
+print(f'Dear {shrinking_mendel.title()}, \n{message}')
+print(guest_list)
+message = 'You are still invited to dinner, see you later!!!'
+print(f'Dear {guest_list[0].title()}, \n{message}')
+print(f'Dear {guest_list[1].title()}, \n{message}')
+del guest_list[1]
+print(guest_list)
+del guest_list[0]
+print(guest_list)
