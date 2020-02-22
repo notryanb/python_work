@@ -1,0 +1,3 @@
+In Python you can loop through a list until a particular condition is met.
+In Python you can create a box that accepts input and carrys out specific tasks dependent upon the response.
+In Python you can analyze data to come up with solutions to real world problems.
