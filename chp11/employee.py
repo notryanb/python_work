@@ -13,12 +13,16 @@ class Employee:
 
 	def give_raise(self, default_raise=5000):
 		"""Adds $5,000 as raise by default, but also allows the entry of custom amount"""
-		question = input("Default raise equals $5,000, if different enter 'yes', otherwise press enter")
-		if question == 'yes':
-			custom_raise = input("Enter custom raise amount: ")
-			print(f"Your raise is ${custom_raise}")
+		question = input("Please enter raise amount: ")
+		if question == 5000:
+			new_salary = default_raise + annual_salary
+			print(f"New salary is ${new_salary}")
 		else:
-			print(f"Your raise is ${default_raise}")
+			new_salary = question + annual_salary
+			print(f"New salary is ${new_salary}")
+
+
+			
 
 
 
