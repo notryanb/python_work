@@ -10,6 +10,10 @@ class TestEmployee(unittest.TestCase):
 	"""Tests for the class Employee"""
 
 	def setUp(self):
+		"""
+		Create an employee with annual salary and test choice of default raise or custom raise
+		"""
+		
 
 	def test_give_default_raise():
 
