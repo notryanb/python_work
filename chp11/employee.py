@@ -12,19 +12,19 @@ class Employee:
 		self.salary = salary
 
 	def format_name_salary(self):
-		"""Neatly formats full and salary, prints statement"""
-		full_name = f"{self.first} {self.last}"
-		print(f"{full_name.title()} your annual salary is currently {self.salary}")
+		"""Neatly formats full name and salary, prints statement"""
+		full_name_salary = f"{self.first.titel()} {self.last.title()} {self.salary}"
+		return full_name_salary
 
 	def give_raise(self, raise_=5000):
 		"""Adds $5,000 as raise to salary by default, or allows the entry of custom raise amount"""
 		new_salary = self.salary + int(raise_)
 		print(f"Your new salary is now {new_salary}")		
 
-my_employee = Employee('Justin', 'Williams', 80000)
-my_employee.format_name_salary()
-input_raise = input("Please enter a raise amount: ")
-my_employee.give_raise(input_raise)
+# my_employee = Employee('Justin', 'Williams', 80000)
+# my_employee.format_name_salary()
+# input_raise = input("Please enter a raise amount: ")
+# my_employee.give_raise(input_raise)
 
 
 
