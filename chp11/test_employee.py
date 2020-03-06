@@ -9,17 +9,11 @@ from employee import Employee
 class TestEmployee(unittest.TestCase):
 	"""Tests for the class Employee"""
 
-	def test_full_name_raise(self):
-		"""Test that full name and salary formatted correctly"""
-		my_employee = format_name_salary('Justin', 'Williams', 80000)
-		self.assertEqual(format_name_salary, 'Justin Williams 80000')
-
-	# def test_give_default_raise():
-
-
-
-	# def test_give_custom_raise():
-	# 	pass
+	def test_give_custom_raise(self):
+		"""Tests if name and salary are formatted corrctly"""
+		my_employee = format_name_salary('justin', 'williams', 80000)
+		my_employee.format_name_salary()
+		self.assertEqual(my_employee, 'Justin Williams 80000')
 
 if __name__ == '__main__':
     unittest.main()
