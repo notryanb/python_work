@@ -9,11 +9,30 @@ from employee import Employee
 class TestEmployee(unittest.TestCase):
 	"""Tests for the class Employee"""
 
-	def test_give_custom_raise(self):
+	# def setUp():
+	# 	"""Create a question and set of responses for all test methods"""
+	# 	employee = "Please enter your first name, last name and current salary"
+	# 	self.my_employee = Employee(employee)
+	# 	self.response = ['justin', 'williams', 80000]
+
+	def test_format_name_salary(self):
 		"""Tests if name and salary are formatted corrctly"""
-		my_employee = format_name_salary('justin', 'williams', 80000)
+		my_employee = Employee('justin', 'williams', 80000)
 		my_employee.format_name_salary()
-		self.assertEqual(my_employee, 'Justin Williams 80000')
+		self.assertEqual(my_employee.format_name_salary(), 'Justin Williams 80000')
+
+	def test_give_default_raise(self):
+		"""Tests if default raise works"""
+		default_raise = 5000 
+		default_raise.give_raise()
+		self.assertEqual(default_raise.give_raise(), 85000)
+
+
+	def gest_give_custom_raise(self):
+		"""Tests if entering custom raise works"""
+		input_raise = 10000
+		input_raise.give_raise()
+		self.assertEqual(input_raise.give_raise(), 90000)
 
 if __name__ == '__main__':
     unittest.main()
