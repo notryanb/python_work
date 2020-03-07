@@ -23,9 +23,9 @@ class TestEmployee(unittest.TestCase):
 
 	def test_give_default_raise(self):
 		"""Tests if default raise works"""
-		default_raise = 5000 
-		default_raise.give_raise()
-		self.assertEqual(default_raise.give_raise(), 85000)
+		my_employee = Employee('justin', 'williams', 80000)
+		my_employee.give_raise()
+		self.assertEqual(my_employee.give_raise(), 85000)
 
 
 	def gest_give_custom_raise(self):
