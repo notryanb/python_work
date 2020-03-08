@@ -19,7 +19,7 @@ class TestEmployee(unittest.TestCase):
 		"""Tests if name and salary are formatted corrctly"""
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
-		my_employee = Employee('justin', 'williams', 80000)
+		my_employee = Employee('justin', 'williams', 80_000)
 		
 		# The assertion that the `format_name_salary()` outputs what you expect for the above class
 		self.assertEqual(my_employee.format_name_salary(), 'Justin Williams 80000')
@@ -28,20 +28,31 @@ class TestEmployee(unittest.TestCase):
 		"""Tests if default raise works"""
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
-		my_employee = Employee('justin', 'williams', 80000)		
-
+		my_employee = Employee('justin', 'williams', 80_000)		
+		my_employee.give_raise()
 		# The assertion that the `format_name_salary()` outputs what you expect for the above class
-		self.assertEqual(my_employee.give_raise(), 'Your new salary is now 85000')
+		self.assertEqual(my_employee.salary, 85_000)
 
 
-	def gest_give_custom_raise(self):
+	def test_give_custom_raise(self):
 		"""Tests if entering custom raise works"""
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
-		my_employee = Employee('justin', 'williams', 80000)
-
+		my_employee = Employee('justin', 'williams', 80_000)
+		my_employee.give_raise(12345)
 		# The assertion that the `format_name_salary()` outputs what you expect for the above class
-		self.assertEqual(my_employee.give_raise(10000), 'Your new salary is now 85000')
+		self.assertEqual(my_employee.salary, 92_345)
+
+	def test_give_custom_raise_multiple_times(self):
+		"""Tests if entering custom raise works"""
+
+		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
+		my_employee = Employee('justin', 'williams', 80_000)
+		my_employee.give_raise()
+		my_employee.give_raise(12345)
+		my_employee.give_raise(0)
+		# The assertion that the `format_name_salary()` outputs what you expect for the above class
+		self.assertEqual(my_employee.salary, 97_345)
 
 if __name__ == '__main__':
     unittest.main()
