@@ -25,13 +25,13 @@ class TestEmployee(unittest.TestCase):
 		"""Tests if default raise works"""
 		my_employee = Employee('justin', 'williams', 80000)
 		my_employee.give_raise()
-		self.assertEqual(my_employee.give_raise(), 85000)
+		self.assertEqual(my_employee.give_raise(), 'Your new salary is now 85000')
 
 
 	def gest_give_custom_raise(self):
 		"""Tests if entering custom raise works"""
-		input_raise = 10000
-		input_raise.give_raise()
+		my_employee = Employee('justin', 'williams', 80000)
+		my_employee.give_raise()
 		self.assertEqual(input_raise.give_raise(), 90000)
 
 if __name__ == '__main__':
