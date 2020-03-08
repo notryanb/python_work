@@ -28,9 +28,13 @@ class TestEmployee(unittest.TestCase):
 		"""Tests if default raise works"""
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
-		my_employee = Employee('justin', 'williams', 80_000)		
+		my_employee = Employee('justin', 'williams', 80_000)	
+
+		# Increase the salary for that one employee. This method does not return anything.
+		# It "mutates" the salary for the above instance of the class.	
 		my_employee.give_raise()
-		# The assertion that the `format_name_salary()` outputs what you expect for the above class
+
+		# The assertion that the salary property outputs what you expect for the above class
 		self.assertEqual(my_employee.salary, 85_000)
 
 
@@ -39,19 +43,27 @@ class TestEmployee(unittest.TestCase):
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
 		my_employee = Employee('justin', 'williams', 80_000)
+
+		# Increase the salary for that one employee. This method does not return anything.
+		# It "mutates" the salary for the above instance of the class.	
 		my_employee.give_raise(12345)
-		# The assertion that the `format_name_salary()` outputs what you expect for the above class
+
+		# The assertion that the salary property outputs what you expect for the above class
 		self.assertEqual(my_employee.salary, 92_345)
 
 	def test_give_custom_raise_multiple_times(self):
-		"""Tests if entering custom raise works"""
+		"""Tests if entering custom raise works multiple times"""
 
 		# Set up the object you want to test, in this case, a new Employee with first name, last name, and salary
 		my_employee = Employee('justin', 'williams', 80_000)
+
+		# Increase the salary for that one employee. This method does not return anything.
+		# It "mutates" the salary for the above instance of the class.	
 		my_employee.give_raise()
 		my_employee.give_raise(12345)
 		my_employee.give_raise(0)
-		# The assertion that the `format_name_salary()` outputs what you expect for the above class
+
+		# The assertion that the salary property outputs what you expect for the above class
 		self.assertEqual(my_employee.salary, 97_345)
 
 if __name__ == '__main__':
